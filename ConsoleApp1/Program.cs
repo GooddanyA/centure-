@@ -18,6 +18,7 @@ namespace ConsoleApp1
         public static void Centure()
         {
             Console.WriteLine("Введите ваш год ");
+            
             int year = int.Parse (Console.ReadLine());
             
             if (year % 100 == 0)
@@ -31,6 +32,19 @@ namespace ConsoleApp1
             {
                 Console.Write((year / 100) + 1);
                 Console.WriteLine(" Век");
+            }
+
+            Console.WriteLine("Желаете еще?");
+            string g = Console.ReadLine();
+            switch (g)
+            {
+                case "Да":
+                   Centure();
+                    break;
+                    
+                case "Нет":
+                    break;
+
             }
         }
     }    
